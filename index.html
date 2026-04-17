@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO対策 -->
+    <title>神奈川県の解体工事なら西村工業｜木造解体対応</title>
+    <meta name="description" content="神奈川県で解体工事なら西村工業。木造住宅対応。無料見積もり受付中。迅速・丁寧対応。">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        body {
+            background: #0f172a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .hero {
+            width: 100%;
+            max-width: none;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://github.com/183x/arukyo/blob/main/20250726_181957(1).jpg?raw=true') center/cover no-repeat;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero div {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #000a;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+        
+        .tap-hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 0.3
+            }
+            50% {
+                opacity: 1
+            }
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .news-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+        
+        .fade {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+        
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #22c55e;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .line-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #06c755;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .fixed-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>西村工業</h1>
+        <nav>
+            <a href="#home">ホーム</a>
+            <a href="#works">施工実績</a>
+            <a href="#area">対応エリア</a>
+            <a href="#company">会社概要</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>神奈川県の解体工事なら西村工業</h1>
+            <p>木造建築の解体はお任せください！</p><br>
+            <a href="#contact" class="cta-btn">無料見積もりはこちら</a>
+        </div>
+    </section>
+
+    <section id="works" class="fade">
+        <h2 class="section-title">施工実績</h2>
+        <div class="cards">
+
+            <div class="card" onclick="toggleImage(this)">
+                <img src="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" data-before="https://github.com/183x/arukyo/blob/main/file_000000005ee07206a001908732476d11.png?raw=true" data-after="https://github.com/183x/arukyo/blob/main/file_00000000df04720986a1a555a0bde45d.png?raw=true">
+                <div class="label">BEFORE</div>
+                <div class="tap-hint">タップでAFTER</div>
+                <div class="card-content">
+                    <h3>木造住宅解体</h3>
+                    <p>神奈川県藤沢市 / 2024年</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleImage(this)">
+                <img src="https://github.com/183x/arukyo/blob/main/file_00000000e8e47206aa3a4b0cfa82564d.png?raw=true" data-before="https://github.com/183x/arukyo/blob/main/file_00000000e8e47206aa3a4b0cfa82564d.png?raw=true" data-after="https://github.com/183x/arukyo/blob/main/file_00000000e5687206a849c7dbc9b670fe.png?raw=true">
+                <div class="label">BEFORE</div>
+                <div class="tap-hint">タップでAFTER</div>
+                <div class="card-content">
+                    <h3>木造住宅解体</h3>
+                    <p>東京都渋谷区 / 2025年</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="area" class="fade">
+        <h2 class="section-title">対応エリア</h2>
+        <p>神奈川県・東京都</p>
+    </section>
+
+    <section id="company" class="fade">
+        <h2 class="section-title">会社概要</h2>
+        <p>会社名：株式会社西村工業</p>
+        <p>所在地：〒251-0025 神奈川県藤沢市鵠沼石上2-5-1 湘南鵠沼ビル3階C号室</p>
+        <p>代表者：西村 成久</p>
+        <p>事業内容：解体工事一式（木造）</p>
+        <p>設立：2020年</p>
+        <p>TEL：0466-96-0528</p>
+        <p>FAX：0466-96-0529</p>
+        <p>携帯：080-6254-7704</p>
+        <p>E-mail：nishimurakogyo8@gmail.com</p>
+        <p>営業時間：8:00〜18:00（年中無休）</p>
+    </section>
+
+    <section id="contact" class="fade">
+        <h2 class="section-title">お問い合わせ</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFG9LW-lYnAOPsoqL1DrDB3KIPoYxhBzl0AylqgFRWOeGC7g/viewform?usp=header" width="100%" height="800"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2026 西村工業</p>
+    </footer>
+
+    <div class="fixed-buttons">
+        <a href="tel:0802547704" class="cta-btn">📞 電話</a>
+        <a href="https://lin.ee/あなたのID" target="_blank" class="line-btn">LINE</a>
+    </div>
+
+    <script>
+        function toggleImage(card) {
+            const img = card.querySelector('img');
+            const label = card.querySelector('.label');
+            const hint = card.querySelector('.tap-hint');
+            if (img.src === img.dataset.before) {
+                img.src = img.dataset.after;
+                label.textContent = 'AFTER';
+                hint.textContent = 'タップでBEFORE';
+            } else {
+                img.src = img.dataset.before;
+                label.textContent = 'BEFORE';
+                hint.textContent = 'タップでAFTER';
+            }
+        }
+
+        const fades = document.querySelectorAll('.fade');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        fades.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
