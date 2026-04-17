@@ -196,6 +196,63 @@
             background: #020617;
             margin-top: 50px;
         }
+        /* ハンバーガー */
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+        }
+        /* モバイルメニュー */
+        
+        #nav-menu {
+            display: flex;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            #nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 80px 20px;
+                transition: 0.3s;
+            }
+            #nav-menu.active {
+                right: 0;
+            }
+            #nav-menu a {
+                margin: 15px 0;
+                font-size: 18px;
+            }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        @media (min-width: 769px) {
+            .close-btn {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -203,7 +260,15 @@
 
     <header>
         <h1>西村工業</h1>
-        <nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-menu">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
             <a href="#home">ホーム</a>
             <a href="#works">施工実績</a>
             <a href="#area">対応エリア</a>
@@ -214,7 +279,8 @@
 
     <section class="hero" id="home">
         <div>
-            <h1>神奈川県の解体工事なら西村工業</h1>
+            <h2>神奈川県の解体工事なら</h2>
+            <h1>西村工業</h1>
             <p>木造建築の解体はお任せください！</p><br>
             <a href="#contact" class="cta-btn">無料見積もりはこちら</a>
         </div>
@@ -305,6 +371,11 @@
             });
         });
         fades.forEach(el => observer.observe(el));
+
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
